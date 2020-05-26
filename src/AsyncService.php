@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AsyncService;
+namespace RoshanAsyncService;
 
 /**
  * HTTP异步请求服务
