@@ -1,0 +1,19 @@
+{
+    "name": "roshan/php-async",
+    "description": "simple php async",
+    "authors": [
+        {
+            "name": "Roshan",
+            "email": "275509523@qq.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "roshan\\php-async\\": "src/"
+        }
+    }
+}
