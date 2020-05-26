@@ -1,5 +1,5 @@
 {
-    "name": "roshan/php-async",
+    "name": "roshan/roshan-php-async",
     "description": "simple php async",
     "authors": [
         {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "roshan\\php-async\\": "src/"
+            "roshan\\roshan-php-async\\": "src/"
         }
     }
 }
