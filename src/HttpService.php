@@ -12,7 +12,7 @@
 
 // +----------------------------------------------------------------------
 
-namespace service;
+namespace RoshanAsyncService;
 
 /**
  * HTTP请求服务
@@ -90,9 +90,9 @@ class HttpService
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        
+
         list($content, $status) = [curl_exec($curl), curl_getinfo($curl), curl_close($curl)];
-        
+
         return (intval($status["http_code"]) === 200) ? $content : false;
     }
 
@@ -116,7 +116,7 @@ class HttpService
         }
         return $needBuild ? http_build_query($data) : $data;
     }
-    
+
 	/**
 	 * 生成签名
 	 * @param $params	参数
@@ -128,14 +128,14 @@ class HttpService
 		if (!is_array($params)) {
 			$params = array();
 		}
-		
+
 		ksort($params);
 		$text = '';
 		//拼接参数key和value
 		foreach ($params as $k => $v) {
 			$text .= $k . $v;
 		}
-		
+
 		return md5($text . $key . $plus);
 	}
 
